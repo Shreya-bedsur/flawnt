@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Analysis System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Color Analysis System</h1>
+        <div class="upload-section">
+            <div class="upload-box" id="dropZone">
+                <input type="file" id="fileInput" accept="image/*" hidden>
+                <div class="upload-content">
+                    <img src="upload-icon.svg" alt="Upload" id="uploadIcon">
+                    <p>Drag & Drop your image here or</p>
+                    <button id="uploadButton">Choose File</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="results-section" id="resultsSection" style="display: none;">
+            <div class="image-preview">
+                <h2>Original Image</h2>
+                <img id="previewImage" alt="Preview">
+            </div>
+            
+            <div class="analysis-results">
+                <h2>Analysis Results</h2>
+                <div class="undertone-result">
+                    <h3>Detected Undertone:</h3>
+                    <p id="undertoneResult"></p>
+                </div>
+                
+                <div class="color-palette">
+                    <h3>Recommended Colors:</h3>
+                    <div id="colorPalette" class="palette-container"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="loading" id="loadingIndicator" style="display: none;">
+            <div class="spinner"></div>
+            <p>Analyzing image...</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
